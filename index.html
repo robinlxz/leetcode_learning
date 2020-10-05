@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grids</title>
+    <style>
+      .wrapper {
+        display: grid;
+        /* grid-template-columns: 70% 30%; */
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-auto-rows: 100px; */
+        grid-auto-rows: minmax(100px, auto);
+        /* grid-column-gap: 1em;
+        grid-row-gap: 1rem; */
+        grid-gap: 1rem;
+        justify-items: center;
+      }
+      .wrapper > div {
+        background: #eee;
+        padding: 1em;
+      }
+      .wrapper > div:nth-child(odd) {
+        background: #ddd;
+      }
+      .nest {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-gap: 1rem;
+      }
+      .nest > div {
+        border: 1px solid;
+        /* text-align: center; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id quo cumque
+        omnis, magnam veritatis saepe. Alias reiciendis magni, nostrum ea
+        voluptate doloremque architecto atque blanditiis delectus, ratione rerum
+        officiis sed harum labore quos eos deleniti nulla? Impedit minus fuga
+        optio facilis ipsum, error quam inventore atque earum eaque, ad
+        voluptate cupiditate corporis rerum? Ad
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga numquam ab
+        temporibus dolorum, molestiae cum in, dolorem laudantium minima
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id quo cumque
+        omnis, magnam veritatis saepe. Alias reiciendis magni, nostrum ea
+        voluptate doloremque architecto atque blanditiis delectus, ratione rerum
+        officiis sed harum labore quos eos deleniti nulla? Impedit minus fuga
+        optio facilis ipsum, error quam inventore atque earum eaque, ad
+        voluptate cupiditate corporis rerum? Ad
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga numquam ab
+        temporibus dolorum, molestiae cum in, dolorem laudantium minima
+      </div>
+      <div class="nest">
+        <div>
+          Lorem
+        </div>
+        <div>
+          Lorem
+        </div>
+        <div>
+          Lorem
+        </div>
+        <div>
+          Lorem
+        </div>
+        <div>
+          Lorem
+        </div>
+        <div>
+          Lorem
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
